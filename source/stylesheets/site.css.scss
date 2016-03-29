@@ -1,24 +1,45 @@
 /* Clearing base options */
-
 body {
-  margin: 0px;
+  color: #4a4a4a;
+  font-family: Helvetica,sans-serif;
+  font-size: 16px;
+  margin: 0;
   background-color: #FAF8F3;
+}
+h1 {
+  color: #fff;
+  font-size: 2em;
+  font-family: 'HelveticaNeueCondensedBold';
+}
+h2, h3 {
+  color: #fff;
+  font-size: 1.5em;
+  font-family: 'HelveticaNeueCondensedBold';
+}
+h4 {
+  font-size: 1em;
+  font-family: 'HelveticaNeueCondensedBold';
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'HelveticaNeueCondensedBold';
+  src: url("../fonts/HelveticaNeue-CondensedBold.otf");
+  font-style: bold;
 }
 
 /* Top Bar Stuff */
-
 .topbar {
   position: relative;
   background: #fffdf8;
-  -webkit-box-shadow: 0px 1px 2px 0px #ccc;
-  -moz-box-shadow:    0px 1px 2px 0px #ccc;
-  box-shadow:         0px 1px 2px 0px #ccc;
+  -webkit-box-shadow: 0 1px 2px 0 #ccc;
+  -moz-box-shadow: 0 1px 2px 0 #ccc;
+  box-shadow: 0 1px 2px 0 #ccc;
   z-index: 1;
 }
-
 .logo {
   width: 100%;
-  font-family: Helvetica,"sans serif";
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 2em;
   color: black;
   margin: 0;
@@ -29,92 +50,223 @@ body {
     vertical-align: middle;
   }
 }
-
 .nav-links {
-  font-family: Helvetica,"sans serif";
+  font-family: 'HelveticaNeueCondensedBold';
   position: relative;
   height: 5em;
   a {
     text-decoration: none;
-    color: black;
+    color: #4a4a4a;
   }
-  a:link, a:visited {
-    color: black;
+  a:link,
+  a:visited {
+    color: #4a4a4a;
   }
   a:hover {
     color: #2B3990;
   }
-  p {
-    font-size: 1.2em;
-    line-height: 5em;
-    text-align: right;
-    margin: 0;
-  }
+}
+
+/* Buttons */
+.ghost-btn {
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin: 50px auto 0;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  width: 250px;
+}
+.ghost-btn:focus,
+.ghost-btn:hover {
+  color: #fff;
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.4);
+  border-color: #fff;
+  border-color: rgba(255,255,255,0.4);
 }
 
 /* Home Page */
-
-.main-banner {
-  h1 {
-    font-family: Helvetica,"sans serif";
-    font-size: 2.2em;
-    text-align: center;
-    margin: 0.5em 0 0.1em 0;
-  }
+#home {
+  background: url("../images/hero-home.png") no-repeat center center;
+  background-size: cover;
+  min-height: 1000px;
 }
-
-.headshot {
-  height: 12em;
-  margin: auto;
-  display: none;
-}
-
-.headshot-text {
+#home h1 {
+  font-size: 2em;
+  margin: 50% auto 20px;
   text-align: center;
-  font-family: Helvetica,"sans serif";
-  font-size: 1.4em;
-  font-weight: normal;
+}
+#home h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
 }
 
-/* Values Page */
-
-.value-points {
-  padding-left: 2em;
-  padding-right: 2em;
-  p {
-    font-family: Helvetica,"sans serif";
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 0.3em;
-    margin-top: 0.3em;
-  }
-  .subpoint {
-    font-family: Helvetica,"sans serif";
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #353E58;
-    list-style-type: none;
-    margin-left: 1em;
-  }
+/* About/Values Page */
+#values .grid:last-child {
+  margin-bottom: 60px;
+}
+#value-header {
+  background-color: #d75c35;
+}
+#value-hero {
+  background: url("../images/hero-values.png") no-repeat center;
+  background-size: cover;
+  min-height: 275px;
+  background-position: 10% 35%;
+}
+#values h2 {
+  text-align: center;
+  margin: 8% auto 0;
+}
+#values h3 {
+  color: #d75c35;
+  font-family: 'HelveticaNeueCondensedBold';
+}
+.value-point {
+  float: left;
+  font-size: 25px;
+  font-weight: bold;
+}
+.value-text {
+  float: left;
+  font-size: 16px;
+  margin: 0 0 20px 10px;
+  width: 75%;
 }
 
-@media screen and (max-width: 710px) {
-  .value-points {
-    padding-left: 0em;
-    padding-right: 0em;
-  }
+/* Staff Page */
+#staff .grid:last-child {
+  margin-bottom: 60px;
+}
+#staff-header {
+  background-color: #028090;
+}
+h2#staff-h2, h3#staff-h3 {
+  color: #028090;
+  text-align: center;
+}
+ul.staff-member {
+  margin: 0 auto;
+}
+ul.staff-member li {
+  display: inline-block;
+  margin: 10px;
+}
+ul.staff-member li p {
+  text-align: center;
+}
+.exec-container {
+  margin: 0 auto;
+  width: 50%;
+}
+.staff-container {
+  margin: 0 auto;
+  width: 75%;
+}
+#excecutive-staff p {
+  text-align: center;
+}
+.exec {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: block;
+}
+.other {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
 }
 
 /* Contact Page */
-
-.contact-info {
-  font-family: Helvetica,sans-serif;
+#contact-header {
+  background-color: #ffbf00;
+}
+#contact-hero {
+  background: url("../images/hero-contact.png") no-repeat center;
+  background-size: cover;
+  min-height: 275px;
+  background-position: 10% 15%;
+}
+#contact-hero h2 {
   text-align: center;
-  .email-and-address {
-    font-weight:normal;
-    font-size:1.5em;
+  margin: 10% auto 0;
+}
+#areas {
+  background-color: #00808e;
+}
+.contact-container {
+  margin: 0 auto;
+  width: 50%;
+}
+#areas-map {
+  width: 300px;
+}
+#areas h3 {
+  color: #ffbf00;
+  font-family: 'HelveticaNeueCondensedBold';
+  font-size: 2em;
+}
+#areas p {
+  color: #fff;
+  font-family: 'HelveticaNeueCondensedBold';
+  font-size: 1.5em;
+}
+#contact-info {
+  text-align: left;
+  margin: 0 0 60px;
+}
+#contact-info h4 {
+  font-size: 1.25em;
+  font-family: 'HelveticaNeueCondensedBold';
+}
+#contact-info a:link {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+#contact-info a:hover {
+  color: #00808e;
+  text-decoration: none;
+}
+
+/* Responsive Stuff */
+@media screen and (max-width: 960px) {
+  .exec-container {
+    margin: 0 auto;
+    width: 80%;
   }
-  .admin {
-    color: #353E58;
+  .staff-container {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #values h2 {
+    margin: 25% auto 0;
+  }
+  #contact-hero h2 {
+    margin: 25% auto 0;
+  }
+  .contact-container {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .removePadding {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .areas-container {
+    margin: 0 auto;
+    width: 100%;
   }
 }
