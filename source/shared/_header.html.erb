@@ -1,22 +1,17 @@
-<header>
-  <div class="topbar">
-    <div class="grid">
-      <div class="unit two-fifths logo center-on-tablets">
-        <a href="/">
-          <%= image_tag('images/logo.svg', :class => "logo-image") %>
-        </a>
-      </div>
-      <div class="unit three-fifths nav-links center-on-tablets">
-        <p>
-          <%= link_to("HOME", "/") %>
-
-          <%= link_to("ABOUT US", "/about.html") %>
-
-          <%= link_to("OUR STAFF", "/staff.html") %>
-
-          <%= link_to("CONTACT", "/contact.html") %>
-        </p>
-      </div>
-    </div>
+<nav style="background-color: pink;">
+  <div class="logo center-on-tablets">
+    <a href="/">
+      <%= image_tag('images/logo.svg', :class => "logo-image") %>
+    </a>
   </div>
-</header>
+
+  <div class="nav-links center-on-tablets">
+    <%= link_to("HOME", "/") %>
+
+    <%= link_to("ABOUT", "/about.html") %>
+
+    <%= link_to("STAFF", "/staff.html") %>
+
+    <%= link_to("CONTACT", "/contact.html") %>
+  </div>
+</nav>

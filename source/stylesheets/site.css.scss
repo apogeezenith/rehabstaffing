@@ -1,6 +1,6 @@
 /* Clearing base options */
 body {
-  color: #4a4a4a;
+  color: #595959;
   font-family: Helvetica,sans-serif;
   font-size: 16px;
   margin: 0;
@@ -28,42 +28,46 @@ h4 {
   font-style: bold;
 }
 
-/* Top Bar Stuff */
-.topbar {
-  position: relative;
-  background: #fffdf8;
-  -webkit-box-shadow: 0 1px 2px 0 #ccc;
-  -moz-box-shadow: 0 1px 2px 0 #ccc;
-  box-shadow: 0 1px 2px 0 #ccc;
-  z-index: 1;
+/* Navigation */
+nav {
+  padding: 20px 12.5% 20px;
+  height: 100%;
 }
+nav:after {
+  clear:both;
+}
+
 .logo {
-  width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2em;
   color: black;
   margin: 0;
   float: left;
   .logo-image {
-    height: 3em;
-    position: relative;
-    vertical-align: middle;
+    height: auto;
+    width: 125px;
   }
 }
 .nav-links {
+  float: right;
   font-family: 'HelveticaNeueCondensedBold';
-  position: relative;
-  height: 5em;
+  font-size: 1.25em;
+  height: 100%;
   a {
+    color: #595959;
+    display:inline-block;
+    margin: auto 20px auto 0;
     text-decoration: none;
-    color: #4a4a4a;
+  }
+  a:last-child {
+    margin: 0;
   }
   a:link,
   a:visited {
-    color: #4a4a4a;
+    color: #595959;
   }
   a:hover {
-    color: #2B3990;
+    color: #00808e;
   }
 }
 
@@ -110,7 +114,7 @@ h4 {
 
 /* About/Values Page */
 #values .grid:last-child {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 #value-header {
   background-color: #d75c35;
@@ -143,7 +147,7 @@ h4 {
 
 /* Staff Page */
 #staff .grid:last-child {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 #staff-header {
   background-color: #028090;
@@ -229,13 +233,22 @@ ul.staff-member li p {
   font-family: 'HelveticaNeueCondensedBold';
 }
 #contact-info a:link {
-  color: #4a4a4a;
+  color: #595959;
   text-decoration: none;
 }
 #contact-info a:hover {
   color: #00808e;
   text-decoration: none;
 }
+
+/* Footer */
+footer {
+  background-color: #c1a896;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
 
 /* Responsive Stuff */
 @media screen and (max-width: 960px) {
