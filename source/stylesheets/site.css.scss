@@ -30,13 +30,22 @@ h4 {
 
 /* Navigation */
 nav {
-  padding: 20px 12.5% 20px;
+  padding: 10px 12.5% 0;
   height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 nav:after {
   clear:both;
 }
-
+.topbar {
+    position: relative;
+    background: #fffdf8;
+    -webkit-box-shadow: 0px 1px 2px 0px #ccc;
+    -moz-box-shadow: 0px 1px 2px 0px #ccc;
+    box-shadow: 0px 1px 2px 0px #ccc;
+    z-index: 1;
+}
 .logo {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2em;
@@ -52,7 +61,9 @@ nav:after {
   float: right;
   font-family: 'HelveticaNeueCondensedBold';
   font-size: 1.25em;
-  height: 100%;
+  position: absolute;
+  right: 12.5%;
+  top: 40%;
   a {
     color: #595959;
     display:inline-block;
@@ -70,7 +81,6 @@ nav:after {
     color: #00808e;
   }
 }
-
 /* Buttons */
 .ghost-btn {
   background: none;
@@ -262,6 +272,21 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
+  nav {
+    padding: 0;
+  }
+  .nav-links {
+    position: static;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  .logo {
+    width: 100%;
+  }
+  .logo-image {
+    display:block;
+    margin: 20px auto;
+  }
   #values h2 {
     margin: 25% auto 0;
   }
