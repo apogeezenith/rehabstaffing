@@ -47,14 +47,11 @@ nav:after {
     z-index: 1;
 }
 .logo {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
   color: black;
   margin: 0;
   float: left;
   .logo-image {
-    height: auto;
-    width: 125px;
+    padding: 10px;
   }
 }
 .nav-links {
