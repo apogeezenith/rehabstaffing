@@ -173,13 +173,13 @@ ul.staff-member li {
 ul.staff-member li p {
   text-align: center;
 }
-.exec-container {
-  margin: 0 auto;
-  width: 50%;
+.exec-block {
+  display: inline-block;
+  margin: 15px;
 }
-.staff-container {
-  margin: 0 auto;
-  width: 75%;
+.staff-block {
+  display: inline-block;
+  margin: 10px;
 }
 #excecutive-staff p {
   text-align: center;
